@@ -2,7 +2,11 @@ body {
     font-family: 'Arial', 'Roboto', 'Comic Sans', sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('background.gif');
     background-color: #f2f2f2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 h1 {
@@ -11,24 +15,30 @@ h1 {
     color: white;
     padding: 40px;
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 110px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 2.5em;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    border: 3px solid teal;
-    border-radius: 20px;
-    overflow: hidden;
     width: 500px;
     margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 110px;
 }
 
 li {
-    background-color: #fff;
     box-sizing: border-box;
     width: 100%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: 3px solid teal;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 a {
@@ -43,4 +53,23 @@ a {
 a:hover {
     background-color: teal;
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    ul {
+        width: 90%;
+    }
+
+    li {
+        width: 100%;
+    }
+
+    a {
+        padding: 15px;
+    }
 }
