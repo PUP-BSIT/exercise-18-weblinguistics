@@ -1,0 +1,75 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d2b48c;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #d2b48c; 
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #ff007f;
+    font-weight: 900;
+}
+.container div, 
+div {
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #8b735b;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    width: 70%;
+}
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #ff007f;
+    border: 5px solid #8b735b;
+}
+#country_details,
+#region_countries {
+    padding: 20px;
+    border: 5px solid #8b735b;
+    background-color: #d2b48c;
+    margin-top: 10px;
+}
+.country-card {
+    border: 5px solid #8b735b;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+ul {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    color: #ff00ff;
+    list-style-type: disc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #777;
+    width: calc(33.333% - 10px);
+}
