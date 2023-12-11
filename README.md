@@ -1,1 +1,9 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/sk5Li_ri)
+
+Group Name: WebLinguistics
+
+Description: "Hello and welcome to our team's website! Our project is an exciting personal webpage where we showcase our unique interests, achievements, and aspirations. What sets us apart is the integration of an interactive comment section, providing you with an opportunity to engage with us directly. One of the latest enhancements includes a dynamic feature allowing you to sort comments in both ascending and descending order, providing a seamless browsing experience. Moreover, we've introduced a new button that lets you explore a curated list of countries worldwide, highlighting the powerful functionalities of our API. Behind the scenes, the backend of our API is seamlessly integrated into our group project on our domain. The REST API page offers powerful CRUD operations for a fascinating category. We've meticulously designed the API with at least 5 fields for each entity. Whether you choose to create, read, update, or delete, our single endpoint caters to all CRUD operations, and the basis for each action is determined by the HTTP request method. We've taken care to avoid redundancy within our group's categories, ensuring a diverse and engaging experience for our visitors. As a united team, we've poured our efforts into crafting a platform that reflects our commitment to unity and delivering top-notch work. Feel free to explore our website, where you'll discover fascinating facts and trivia about each of us. Thank you for visiting, and we hope you thoroughly enjoy your experience!"
+
+https://weblinguistics-exercise18.netlify.app/
+
+EXERCISE 18 - WEB LINGUISTICS
