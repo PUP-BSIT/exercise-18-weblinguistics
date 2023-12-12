@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Villamarzo Kazel</title>
+    <link href="Villamarzo_Kazel.css" rel="stylesheet" type="text/css">
+</head>
+	<body>
+
+		<div>
+			<h1>Villamarzo Kazel</h1>
+		</div>
+
+		<div>
+			<h2>My interest and hobbies</h2>
+			<ul>
+				<li>Watching K Drama</li>
+				<p>To relieve stress</p>
+				<li>Online Games</li>
+				<p>Just for Fun</p>
+				<li>Playing Badminton</li>
+				<p>Can less boredom</p>
+				<li>Cooking</li>
+				<p>Giving a peace of mind</p>
+				<li>Listening to music</li>
+				<p>Just enjoying the Day</p>
+			</ul>
+		</div>
+
+		<div>
+			<h2>My Works</h2>
+			<ol>
+				<li><a href="#"> Work 1</a></li>
+				<li><a href="#"> Work 2 </a></li>
+				<li><a href="#"> Work 3 </a></li>
+			</ol>
+		</div>
+
+		<div>
+			<h2>Testimonial</h2>
+			<p>"She is making way for her to learn and to cope up with
+				the hindrances to make the project/groupwork properly. I like
+				her determination throughout every group project. I'm hoping 
+				for more works withher." - JAMES NABAYRA</p>
+			<p>"She suddenly lost one of her precious life. I hope that 
+				whatever she faces each day, she'll get through
+				everything. I like her spirit" - ED JUDAH MINGO</p>
+			<p>"She is kind". -Diana Rose Fidel</p>
+			<p>"I like the fact that we can rely on you, especially when
+				it comes to written activities. I have someone
+				who can assist me. I also appreciate your willingness to
+				help us at school wherever we go." -Karen Alonica Casim</p>
+		</div>
+
+		<div>
+			<h2> Gallery </h2>
+			<img src="./image/mountain.png" class="gallery-image">
+			<img src="./image/part1.jpg" class="gallery-image">
+			<img src="./image/part2.jpg" class="gallery-image">
+			<img src="./image/part3.jpg" class="gallery-image">
+		</div>
+		
+		<section id="my_goals">
+			<h2>My Goals</h2>
+			<ul>
+				<li>Goal 1: To Finish this task on time</li>
+				<li>Goal 2: To resolve conflict</li>
+				<li>Goal 3: To push and Pull files </li>
+			</ul>
+		</section>
+		
+		<button id="countries_button" onclick="navigateToCountries()">
+			Go to Countries Page</button>
+		
+		<label for="sort">Sort by:</label>
+				<select id="sort">
+				<option value="asc">Ascending</option>
+				<option value="desc">Descending</option>
+		</select>
+		
+		<div id="comments_section">
+			<h2>Comments:</h2>
+			<div id="comments" class="comment-container">
+				<div class="comment-container" data-timestamp="2023-11-01">
+				<p><strong>Name:</strong>Karen Alonica Casim</p>
+				<p>You have the same goal with
+					our teammate, so i will say the same; Good luck with
+					your aspirations,and I hope you know how to rest.</p>
+		</div>
+		
+			<div class="comment-container" data-timestamp="2023-11-02">
+				<p><strong>Name:</strong>Diana Rose Fidel</p>
+				<p>Good luck to your task!!</p>
+		</div>
+			<div class="comment-container" data-timestamp="2023-11-03">
+				<p><strong>Name:</strong>Ed Judah Mingo</p>
+				<p>I hope that you will be able
+					to recover the circumstances that you are facing</p>
+		</div>
+			<div class="comment-container" data-timestamp="2023-11-04">
+				<p><strong>Name:</strong>James Nabayra</p>
+				<p>I like it that you
+					know how to properly manage your work like this.
+					Thrive more and you can do better next time. 
+					Be courageous and have faith always, Kazel!</p>
+		</div>
+		
+		<div id="comment_form">
+			<label for="name">Name:</label>
+			<input type="text" id="name" required>
+			<label for="comment">Comment:</label>
+			<textarea id="comment_text" required></textarea>
+			<button id="comment_button">Comment</button>
+		</div>	
+		
+			<script src="Script1.js"></script>
+
+	</body>
+</html>
