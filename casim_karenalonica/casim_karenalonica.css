@@ -1,0 +1,150 @@
+body {
+    background-color: #cbc3e3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #301934;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #301934;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+li p {
+    font-weight: normal;
+}
+
+ol {
+    list-style-type: decimal;
+    padding: 0;
+}
+
+ol li a {
+    color: #b65fcf;
+    text-decoration: none;
+}
+
+p {
+    font-style: italic;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #7851a9;
+    color: black;
+    border: none; 
+    border-radius: 5px;
+}
+
+#sort, 
+#asc,
+#desc {
+    background-color: #7851a9;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comments-container,
+#comment_form {
+    align-items: center;
+    text-align: center;
+}
+
+#comments_container div {
+    border: 2px solid #301934;
+	width: 75%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#comment_form label,
+#comment_form input,
+#comment_form textarea {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 10px;
+    width: 70%;
+}
+
+#comment_form input,
+#comment_form textarea {
+    padding: 10px;
+    border: 2px solid #702670;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+#comment_form button {
+    background-color: #7851a9;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+	width: 25%;
+}
+
+h2 + img {
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button:hover {
+    background-color: #a674d2;
+}
