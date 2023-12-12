@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="design.css" rel="stylesheet" type="text/css"/>
+		<title>Mingo Ed Judah Page</title>
+	</head>
+	
+	<body>
+		<div id="header">
+			<h1>Welcome To My Page!</h1>
+		</div>
+
+		<div id="section1">
+				<a href="#">Home</a>
+				<a href="#">My Blog</a>
+				<a href="#">Portfolio</a>
+				<a href="#">Contacts</a>
+		</div>
+		
+		<div id="section2">
+			<img src="./images/profile.jpg" id="profile_image">
+			<div id="profile_text">
+				<h2>About Me</h2>
+				<div class="description">
+					<p>Greetings! I am Ed Judah Mingo, 20 years old living 
+						in Taguig City. I am a third year college student 
+						taking up Bachelor of Science in Information 
+						Technology at Polytechnic University of the 
+						Philippines Taguig Branch and this is my page 
+						for Web Development subject.</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="section3">
+			<h2>My Interests and Hobbies</h2>
+			<ul>
+				<li>
+					<p>Online games - Playing games such as Mobile Legends, 
+						League of Legends, and Roblox gets rid of my 
+						boredom.</p>
+				</li>
+				<li>
+					<p>Cooking - I cook common Filipino dishes every day.</p>
+				</li>
+				<li>
+					<p>Watching animes - I watch anime when I still have 
+						allotted time.</p>
+				</li>
+				<li>
+					<p>Reading manhwa, manga & manhua - I love reading these 
+						types of illustrations and most importantly, 
+						the genre.</p>
+				</li>
+				<li>
+					<p>Coding - This became my hobby because I cannot just 
+						ignore my school life, especially my future.</p>
+				</li>
+			</ul>
+		</div>
+		
+		<div id="section4">
+			<h2>My Testimony</h2>
+			<p>"Embarking on my web development journey has been incredibly 
+				exciting. As a beginner, I've marveled at the wonders of 
+				HTML, CSS, and JavaScript, the building blocks of the web.
+				With the help of beginner-friendly tutorials, online 
+				courses, and supportive coding communities, I've started 
+				creating my first websites from scratch. Understanding the 
+				basics has given me a strong foundation, and I'm enthusiastic
+				about delving deeper into the world of web technologies.
+			</p>
+		</div>
+		
+		<div id="section5">
+			<h2>Teammates Testimony</h2>
+
+			<p>"He is doing his job properly individually or in group. I like 
+				his determination to learn and to apply his learnings in real 
+				life. He's also persevered to take on the different 
+				challenges. I want to learn the lessons together with him." 
+				- JAMES NABAYRA
+			</p>
+
+			<p>"He always ready to lend a helping hand to those in need." 
+				- Diana Rose Fidel</p>
+
+			<p>"I appreciate his assistance, especially on this subject. I'm 
+				glad we can count on someone like him." 
+				- Karen Alonica Casim</p>
+		</div>
+
+		<div id="section6">
+			<h2>My Goals</h2>
+
+			<ul>
+				<li><p>Goal 1: Complete the exercise within this day.</p></li>
+				<li><p>Goal 2: Resolve the conflicts I may encounter.</p></li>
+				<li><p>Goal 3: Commit and push after resolving the conflict.
+				</p></li>
+			</ul>
+
+			<div id="team_comments">
+				<h3>Teammates Comments</h3>
+	
+				<p><strong>Name:</strong> Karen Alonica Casim</p>
+				<p>- Good luck with your aspirations, and I hope you know 
+					how to rest.</p>
+	
+				<p><strong>Name:</strong> Diana Rose Fidel</p>
+				<p>- Do everything you can to achieve your goal.</p>
+	
+				<p><strong>Name:</strong> James Nabayra</p>
+				<p>- Your goals are too specific and I love it because you 
+					know every steps on how to do this properly. Thank you 
+					also for guiding us in the right path. You really are 
+					an organized person. Let's unite always, Ed!</p>
+	
+				<p><strong>Name:</strong> Kazel Villamarzo</p>
+				<p>- A Friend is a friend but a best friend is even better</p>
+			</div>
+		</div>
+			
+		<div id="comment_form">
+			<div id="form_container">
+				<label for="name">Name:</label>
+				<input type="text" id="name" class="input_field" required>
+				<label for="comment">Comment:</label>
+				<textarea id="comment" class="input_field" required>
+				</textarea>
+				<button id="comment_button" disabled>Comment</button>
+			
+				<button onclick="sortComments('asc')">Sort Ascending</button>
+				<button onclick="sortComments('desc')">Sort Descending
+				</button>
+		  </div>
+
+		  <div id="comments_container"></div>
+		</div>
+		
+		<button id="countries_button" onclick="navigateToCountries()">
+			Go to Countries Page</button>
+
+		<div id="footer">
+			<p>&copy; 2023 Mingo Ed Judah. All rights reserved.</p>
+		</div>
+		
+		<script src="exercise_16.js"></script>
+	</body>
+</html>

@@ -1,0 +1,206 @@
+body {
+	font-family: 'Arial', 'Roboto', 'Comic sans', sans-serif;
+	margin: 0;
+	padding: 0;
+    background-image: url('bg_design.gif');
+    background-color: #f2f2f2;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header {
+    background-color: teal;
+    font-family: 'Bahnschrift', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#section1 {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+#section1 a {
+	color: white;
+	text-decoration: none;
+	margin: 0 15px;
+	padding: 10px 15px;
+}
+	
+#section2 {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin: 0 20px;
+    background-color: #D6EAF8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#section2 h2 {
+    font-family: 'Bahnschrift', sans-serif;
+    margin-bottom: 30px;
+}
+
+#profile_image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#profile_text {
+    flex: 1;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+#section3,
+#section4,
+#section5,
+#section6,
+#comment_form,
+#countries_button {
+    padding: 10px;
+    padding-left: 30px;
+    margin: 0 20px;
+    background-color: #D6EAF8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#section3 h2, 
+#section4 h2, 
+#section5 h2, 
+#section6 h2,
+#team_comments h3 {
+    font-family: 'Bahnschrift', sans-serif;
+    margin-bottom: 20px;
+}
+
+#section1,
+#section2,
+#section3, 
+#section4, 
+#section5,
+#section6,
+#comment_form,
+#countries_button {
+    margin-bottom: 20px;
+}
+
+#section3 {
+    background-color: #D6EAF8 ;
+}
+
+#section4 {
+    background-color: #D6EAF8;
+}
+
+#section5 {
+    background-color: #D6EAF8;
+}
+
+#section6{
+    background-color: #D6EAF8;
+}
+
+#comment_form {
+    padding: 10px;
+    margin: 0 20px 20px;
+    background-color: #D6EAF8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#form_container {
+    margin-bottom: 20px;
+}
+
+#form_container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input_field {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#form_container button {
+    background-color: #86C9CA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form_container button:hover {
+    background-color: #76999A;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+#comment_form button {
+    background-color: #86C9CA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comment_form button:hover {
+    background-color: #76999A;
+}
+
+#countries_button {
+    background-color: #86C9CA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#countries_button:hover {
+    background-color: #76999A;
+}
+
+#footer {
+    background-color: teal;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #section2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #profile_image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .input_field {
+        width: calc(100% - 16px);
+    }
+}
