@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>CASIM KAREN ALONICA PAGE</title>
-    <link rel="stylesheet" href="casim_karenalonica.css">
+	<link rel="stylesheet" href="casim_karenalonica.css">
 </head>
 <body>
     <div>
@@ -93,10 +93,36 @@
         <button id="comment_button">Comment</button>
     </div>
 	
-	<button id="countries_button" onclick="navigateToCountries()">
-		Go to Countries Page</button>
+	<div>
+		<h2>Looking for a Country?</h2>
+		<button id="countries_button" onclick="navigateToCountries()">
+			Go to Countries Page</button>
+	</div>
+    
+	<div>
+	<form id="add_book_form">
+    <label for="title_input">Title:</label>
+    <input type="text" id="title_input" required>
 
-    <div>
+    <label for="author_input">Author:</label>
+    <input type="text" id="author_input" required>
+
+    <label for="publisher_input">Publisher:</label>
+    <input type="text" id="publisher_input" required>
+
+    <label for="publication_year_input">Publication Year:</label>
+    <input type="text" id="publication_year_input" required>
+
+    <label for="genre_input">Genre:</label>
+    <input type="text" id="genre_input" required>
+
+    <button type="submit">Add Book</button>
+	</form>
+
+	<ul id="book_list"></ul>
+	</div>
+	
+	<div>
         <h2> Gallery </h2>
         <img src="./images/image1.jpg" alt="Image of American-Indian War">
         <img src="./images/image2.jpg" alt="Image of Egyptian Gods
