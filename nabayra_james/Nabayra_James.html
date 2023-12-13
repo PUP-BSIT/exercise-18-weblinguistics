@@ -113,6 +113,31 @@
 		
 		<button id="countries_button" onclick="navigateToCountries()">
 			Go to Countries Page</button>
+		
+    <h1>Harry Potter Characters</h1>
+
+    <!-- Form for adding a new character -->
+    <form id="add_character_form">
+        <label for="name_input">Name:</label>
+        <input type="text" id="name_input" required>
+
+        <label for="house_input">House:</label>
+        <input type="text" id="house_input" required>
+
+        <label for="birth_date_input">Birth Date:</label>
+        <input type="text" id="birth_date_input" required>
+
+        <label for="patronus_input">Patronus:</label>
+        <input type="text" id="patronus_input" required>
+
+        <label for="wand_input">Wand:</label>
+        <input type="text" id="wand_input" required>
+
+        <button type="submit">Add Character</button>
+    </form>
+
+    <!-- Displaying characters -->
+    <ul id="character_list"></ul>
 
 		<div>
 			<h2> Gallery </h2>
@@ -127,7 +152,9 @@
 			<img src="image/Blackpink.jpg" width="1025" height="600"
 					  border style="border: 10px solid #FF1493;">
 		</div>
+		
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-		<script src="java.js"></script>
+		<script src="javaa.js"></script>
 	</body>
 </html>
