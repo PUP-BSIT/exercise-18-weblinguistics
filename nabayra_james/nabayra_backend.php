@@ -4,7 +4,6 @@ header("Access-Control-Allow-Origin:*");
 header("Access-Control-Allow-Methods:*");
 header("Access-Control-Allow-Headers:*");
 
-// Database connection
 $servername = "127.0.0.1:3306";
 $username = "u722605549_db_exe18_user";
 $password = "?zz8v1H&";
@@ -12,17 +11,14 @@ $dbname = "u722605549_db_exercise18";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Handling CRUD operations
 $request_method = $_SERVER["REQUEST_METHOD"];
 
 switch ($request_method) {
     case 'GET':
-        // Get characters list
         $query = "SELECT * FROM nabayra_table";
         $result = $conn->query($query);
 
@@ -36,7 +32,6 @@ switch ($request_method) {
         break;
 
     case 'POST':
-        // Create a new character
         $data = json_decode(file_get_contents("php://input"), true);
 
         $name = $data['name'];
@@ -45,8 +40,10 @@ switch ($request_method) {
         $patronus = $data['patronus'];
         $wand = $data['wand'];
 
-        $query = "INSERT INTO nabayra_table (name, house, birth_date, patronus, wand) 
-            VALUES ('$name', '$house', '$birth_date', '$patronus', '$wand')";
+        $query = "INSERT INTO nabayra_table 
+			(name, house, birth_date, patronus, wand)
+            VALUES 
+			('$name', '$house', '$birth_date', '$patronus', '$wand')";
         if ($conn->query($query)) {
             echo "Character added successfully";
         } else {
@@ -66,7 +63,7 @@ switch ($request_method) {
         $wand = $input['wand'];
 
         $query = "UPDATE nabayra_table SET 
-            name='$name', house='$house', birth_date='$birth_date', 
+            name='$name', house='$house', birth_date='$birth_date',
             patronus='$patronus', wand='$wand' WHERE id=$id";
         if ($conn->query($query)) {
             echo "Character updated successfully";
@@ -76,7 +73,6 @@ switch ($request_method) {
         break;
 
     case 'DELETE':
-        // Delete character
         parse_str(file_get_contents("php://input"), $data);
         $id = $data['id'];
 
@@ -89,14 +85,13 @@ switch ($request_method) {
         break;
 
     case 'OPTIONS':
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PATCH");
-        header("Access-Control-Allow-Headers: Content-Type");
+        header("Access-Control-Allow-Origin:*");
+        header("Access-Control-Allow-Methods:*");
+        header("Access-Control-Allow-Headers:*");
         header("HTTP/1.1 200 OK");
         break;
 
     default:
-        // Invalid Request Method
         header("HTTP/1.0 405 Method Not Allowed");
         break;
 }
