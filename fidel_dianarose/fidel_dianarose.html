@@ -109,6 +109,30 @@
 		<button id="countries_button" onclick="navigateToCountries()">
 			Go to Countries Page</button>
 			
+		<h1>Brand Information</h1>
+
+		<form id="add_brand_form">
+				<label for="brand_name_input">Brand Name:</label>
+				<input type="text" id="brand_name_input" required>
+
+				<label for="industry_input">Industry:</label>
+				<input type="text" id="industry_input" required>
+
+				<label for="founded_year_input">Founded Year:</label>
+				<input type="text" id="founded_year_input" required>
+
+				<label for="founders_input">Founders:</label>
+				<input type="text" id="founders_input" required>
+
+				<label for="headquarters_input">Headquarters:</label>
+				<input type="text" id="headquarters_input" required>
+
+		<button type="submit">Add Brand</button>
+		</form>
+
+		<ul id="brand_list"></ul>
+
+    </div>	
 		<div>
 			<h2>Gallery</h2>
 				<img src="image/japan.png" width="500" height="300" 
@@ -124,7 +148,8 @@
 				<img src="image/singapore.png" width="500" height="300"
 				border="5px solid">
 		</div>
-
+		
 		<script src="scripttt.js"></script>
+		
 	</body>
 </html>
