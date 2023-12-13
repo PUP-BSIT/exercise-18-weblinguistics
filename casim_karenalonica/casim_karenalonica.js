@@ -32,7 +32,7 @@ function displayBooks(books) {
             </p>
             <p>Publication Year: 
                 <p id="publication_year_${book.id}">
-					${book.publication_year}</p><hr>
+                    ${book.publication_year}</p><hr>
             </p>
             <p>Genre: 
                 <p id="genre_${book.id}">${book.genre}</p><hr>
@@ -48,14 +48,19 @@ function addBook() {
     const addBookForm = document.getElementById('add_book_form');
 
     addBookForm.addEventListener('submit', function(event) {
-        let title = document.getElementById('title_input').value;
-        let author = document.getElementById('author_input').value;
-        let publisher = document.getElementById('publisher_input').value;
-        let publicationYear = 	
-			document.getElementById('publication_year_input').value;
-        let genre = document.getElementById('genre_input').value;
-
         event.preventDefault();
+
+        let title = document.getElementById('title_input').value.trim();
+        let author = document.getElementById('author_input').value.trim();
+        let publisher = document.getElementById('publisher_input').value.trim();
+        let publicationYear = document.getElementById('publication_year_input').value.trim();
+        let genre = document.getElementById('genre_input').value.trim();
+
+        if (!title || !author || !publisher || !publicationYear || !genre) {
+            console.error('Please fill in all fields');
+            return;
+        }
+
         const bookData = {
             title: title,
             author: author,
@@ -84,7 +89,6 @@ function addBook() {
         document.getElementById('publisher_input').value = "";
         document.getElementById('publication_year_input').value = "";
         document.getElementById('genre_input').value = "";
-
     });
 }
 
@@ -92,39 +96,16 @@ function editBook(id) {
     const title = document.getElementById(`title_${id}`);
     const author = document.getElementById(`author_${id}`);
     const publisher = document.getElementById(`publisher_${id}`);
-    const publicationYear = 
-		document.getElementById(`publication_year_${id}`);
+    const publicationYear = document.getElementById(`publication_year_${id}`);
     const genre = document.getElementById(`genre_${id}`);
 
-    title.innerHTML = `
-        <input 
-        type="text" 
-        id="edit_title_${id}" 
-        value="${title.innerText}">`;
-    author.innerHTML = `
-        <input 
-        type="text" 
-        id="edit_author_${id}" 
-        value="${author.innerText}">`;
-    publisher.innerHTML = `
-        <input 
-        type="text" 
-        id="edit_publisher_${id}" 
-        value="${publisher.innerText}">`;
-    publicationYear.innerHTML = `
-        <input 
-        type="text" 
-        id="edit_publication_year_${id}" 
-        value="${publicationYear.innerText}">`;
-    genre.innerHTML = `
-        <input 
-        type="text" 
-        id="edit_genre_${id}" 
-        value="${genre.innerText}">`;
+    title.innerHTML = `<input type="text" id="edit_title_${id}" value="${title.innerText}">`;
+    author.innerHTML = `<input type="text" id="edit_author_${id}" value="${author.innerText}">`;
+    publisher.innerHTML = `<input type="text" id="edit_publisher_${id}" value="${publisher.innerText}">`;
+    publicationYear.innerHTML = `<input type="text" id="edit_publication_year_${id}" value="${publicationYear.innerText}">`;
+    genre.innerHTML = `<input type="text" id="edit_genre_${id}" value="${genre.innerText}">`;
 
-    const editButton = document.querySelector(`
-        button[onclick="editBook(${id})"]
-        `);
+    const editButton = document.querySelector(`button[onclick="editBook(${id})"]`);
     editButton.innerText = 'Save';
     editButton.setAttribute('onclick', `saveBook(${id})`);
 }
@@ -132,10 +113,8 @@ function editBook(id) {
 function saveBook(id) {
     const newTitle = document.getElementById(`edit_title_${id}`).value;
     const newAuthor = document.getElementById(`edit_author_${id}`).value;
-    const newPublisher = 
-		document.getElementById(`edit_publisher_${id}`).value;
-    const newPublicationYear = 
-		document.getElementById(`edit_publication_year_${id}`).value;
+    const newPublisher = document.getElementById(`edit_publisher_${id}`).value;
+    const newPublicationYear = document.getElementById(`edit_publication_year_${id}`).value;
     const newGenre = document.getElementById(`edit_genre_${id}`).value;
 
     fetch(backendUrl, {
@@ -197,25 +176,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function sortComments(order) {
         const comments = Array.from(commentsContainer.children);
-		comments.shift();
+        comments.shift();
 
-		comments.sort(function(a, b) {
-        const dateA = new Date(a.getAttribute('data-date'));
-        const dateB = new Date(b.getAttribute('data-date'));
+        comments.sort(function(a, b) {
+            const dateA = new Date(a.getAttribute('data-date'));
+            const dateB = new Date(b.getAttribute('data-date'));
 
-        return order === SORT_ASCENDING ? 
-            dateA - dateB : dateB - dateA;
-    });
+            return order === SORT_ASCENDING ? dateA - dateB : dateB - dateA;
+        });
 
-    while (commentsContainer.firstChild) {
+        while (commentsContainer.firstChild) {
             commentsContainer.firstChild.remove();
-    }
+        }
 
-    commentsContainer.appendChild(teammateCommentsHeader);
+        commentsContainer.appendChild(teammateCommentsHeader);
 
-    comments.forEach(function(comment) {
-        commentsContainer.appendChild(comment);
-    });
+        comments.forEach(function(comment) {
+            commentsContainer.appendChild(comment);
+        });
     }
 
     sortComments(sortSelect.value);
@@ -225,33 +203,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     commentButton.addEventListener('click', function () {
-    const name = nameInput.value.trim();
-    const commentText = commentTextInput.value.trim();
+        const name = nameInput.value.trim();
+        const commentText = commentTextInput.value.trim();
 
-    if (name && commentText) {
-        const newComment = document.createElement('div');
-        newComment.setAttribute('data-date', getCurrentDate());
-        newComment.innerHTML = `<p><strong>Name:</strong> ${name}</p> 
-            <p>${commentText}</p>`;
+        if (name && commentText) {
+            const newComment = document.createElement('div');
+            newComment.setAttribute('data-date', getCurrentDate());
+            newComment.innerHTML = `<p><strong>Name:</strong> ${name}</p> <p>${commentText}</p>`;
 
-        commentsContainer.appendChild(newComment);
+            commentsContainer.appendChild(newComment);
 
-        nameInput.value = "";
-        commentTextInput.value = "";
+            nameInput.value = "";
+            commentTextInput.value = "";
 
-        sortComments(sortSelect.value);
+            sortComments(sortSelect.value);
+        }
     });
 
     function getCurrentDate() {
         const now = new Date();
-		const year = now.getFullYear();
-		const month = now.getMonth() + 1;
-		const day = now.getDate();
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1;
+        const day = now.getDate();
 
-		return `${year}-${month < 10 ? '0' + month : month}-${day 
-			< 10 ? '0' + day : day}`;
+        return `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
     }
 });
-
 
 getBooks();
